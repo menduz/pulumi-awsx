@@ -596,4 +596,11 @@ export interface ApplicationListenerArgs {
      * Defaults to [true].
      */
     external?: boolean;
+    
+    /**
+     * If the listener should create the rules for external access in the provided security groups.
+     *
+     * Defaults to [true].
+     */
+    manualSecurityGroupRules?: boolean;
 }
