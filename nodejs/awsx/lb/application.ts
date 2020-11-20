@@ -234,7 +234,7 @@ export class ApplicationListener extends mod.Listener {
         // target group used by the load balancer to route requests, you must verify that the
         // security groups associated with the load balancer allow traffic on the new port in both
         // directions.
-        if (!args.listener && args.external !== false) {
+        if (!args.listener && args.external !== false && args.manualIngressRules) {
             const args = {
                 location: new x.ec2.AnyIPv4Location(),
                 ports: new x.ec2.TcpPorts(port),
